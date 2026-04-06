@@ -748,10 +748,10 @@
   background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(12px);
   display: flex;
-  align-items: flex-end; /* iPhone: Bottom sheet style */
+  align-items: center; /* Move back to center for better visibility */
   justify-content: center;
   z-index: 2000;
-  padding: 0;
+  padding: 1rem;
 }
 
 @media (min-width: 768px) {
