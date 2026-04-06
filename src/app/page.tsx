@@ -252,6 +252,12 @@ export default function Home() {
         </div>
         <nav className={styles.sidebarNav}>
           <button 
+            className={(viewMode === 'welcome') ? `${styles.navItem} ${styles.navActive}` : styles.navItem}
+            onClick={() => { setViewMode('welcome'); setViewingSessionId(null); }}
+          >
+            Home
+          </button>
+          <button 
             className={(viewMode === 'active' && viewingSessionId === null) ? `${styles.navItem} ${styles.navActive}` : styles.navItem}
             onClick={() => { setViewMode('active'); setViewingSessionId(null); }}
           >
@@ -547,11 +553,18 @@ export default function Home() {
       {/* Mobile Bottom Navigation */}
       <nav className={styles.mobileBottomNav}>
         <button 
+          className={viewMode === 'welcome' ? `${styles.mobileNavItem} ${styles.mobileNavActive}` : styles.mobileNavItem}
+          onClick={() => { setViewMode('welcome'); setViewingSessionId(null); }}
+        >
+          <span className={styles.mobileIcon}>🏠</span>
+          <span className={styles.mobileLabel}>Home</span>
+        </button>
+        <button 
           className={viewMode === 'active' ? `${styles.mobileNavItem} ${styles.mobileNavActive}` : styles.mobileNavItem}
           onClick={() => { setViewMode('active'); setViewingSessionId(null); }}
         >
           <span className={styles.mobileIcon}>✈️</span>
-          <span className={styles.mobileLabel}>Active Trips</span>
+          <span className={styles.mobileLabel}>Active</span>
         </button>
         <button 
           className={viewMode === 'archive' ? `${styles.mobileNavItem} ${styles.mobileNavActive}` : styles.mobileNavItem}
