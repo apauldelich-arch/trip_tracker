@@ -14,12 +14,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Live Spend Tracker — Financial Control System",
-  description: "Real-time budget & expense control with multi-session tracking.",
+  title: "Trip Tracker — Travel Memory Engine",
+  description: "Private, high-leverage itinerary and memory capture system for premium travel.",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Spend Tracker",
+    title: "Trip Tracker",
   },
   icons: {
     apple: "/icon.png",

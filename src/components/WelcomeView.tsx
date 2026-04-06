@@ -9,9 +9,8 @@ export function WelcomeView({ onStart }: { onStart: () => void }) {
     <div className={styles.landingBody}>
       {/* HERO SECTION */}
       <header className={styles.heroContent}>
-        <div className={styles.badge}>v2.0 – THE TRIP ENGINE</div>
         <h1 className={styles.heroHeading}>
-          Structured Memory & <span style={{ color: 'var(--primary)' }}>Itinerary System</span>.
+          Structured Memory & <span style={{ color: 'var(--primary)' }}>Trip Tracking</span>.
         </h1>
         <p className={styles.heroSub}>
           Stop just tracking costs. Start building a high-leverage blueprint 
@@ -110,7 +109,7 @@ export function WelcomeView({ onStart }: { onStart: () => void }) {
       </section>
 
       <footer className={styles.section} style={{ padding: '4rem 0', textAlign: 'center', opacity: 0.5 }}>
-        <p>© 2026 Trip Tracker Engine &middot; Privacy First &middot; Structured Travel Memory</p>
+        <p>© 2026 Trip Tracker &middot; Privacy First &middot; Structured Travel Memory</p>
       </footer>
     </div>
   );
