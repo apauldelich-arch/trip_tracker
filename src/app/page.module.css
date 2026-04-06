@@ -568,14 +568,14 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 84px;
-    background: rgba(10, 10, 12, 0.85);
+    height: auto;
+    background: rgba(10, 10, 12, 0.95);
     backdrop-filter: blur(25px);
     border-top: 1px solid var(--border-light);
     z-index: 1500;
-    padding-bottom: 24px; /* Space for home indicator on modern iOS */
-    padding-top: 8px;
-    box-shadow: 0 -10px 40px rgba(0,0,0,0.4);
+    padding-bottom: calc(16px + env(safe-area-inset-bottom)); /* Dynamic Safe Area for iPhone */
+    padding-top: 10px;
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.5);
   }
 
   .mobileNavItem {
@@ -745,13 +745,20 @@
 .modalOverlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(12px);
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* iPhone: Bottom sheet style */
   justify-content: center;
   z-index: 2000;
-  padding: 1rem;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .modalOverlay {
+    align-items: center;
+    padding: 1rem;
+  }
 }
 
 .inputGroup {
@@ -768,14 +775,17 @@
 }
 
 .inputGroup input,
-.inputGroup select {
+.inputGroup select,
+.inputGroup textarea {
   width: 100%;
   padding: 0.875rem 1rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-light);
   border-radius: 12px;
   color: white;
-  font-size: 1rem;
+  font-size: 16px; /* CRITICAL: Prevents iPhone Jump-Zoom */
+  -webkit-appearance: none; /* Reset for iOS */
+  appearance: none;
 }
 
 .modalActions {
