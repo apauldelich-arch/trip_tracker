@@ -10,15 +10,14 @@ export function WelcomeView({ onStart }: { onStart: () => void }) {
       {/* HERO SECTION */}
       <header className={styles.heroContent}>
         <div className={styles.badgeStrip}>
-          <div className={styles.badgePrimary}>Real-Time Trip Tracker</div>
+          <div className={styles.badgePrimary}>Real-time Trip Tracker</div>
         </div>
         <h1 className={styles.heroHeading}>
           Real time <span style={{ color: 'var(--primary)' }}>Trip Tracker</span>
         </h1>
         <p className={styles.heroSub}>
-          Stop just tracking costs. Start building a high-leverage blueprint 
-          of every booking, logistics event, and travel memory. Securely attach 
-          your digital tickets and photos of your journey.
+          The perfect companion for journeys, bookings, and travel memories. 
+          Securely attach your digital tickets of your journey.
         </p>
         
         <div className={styles.heroActions}>

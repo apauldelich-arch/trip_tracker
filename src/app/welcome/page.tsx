@@ -10,15 +10,14 @@ export default function Welcome() {
     <div className={styles.landingBody}>
       <header className={styles.heroContent}>
         <div className={styles.badgeStrip}>
-          <div className={styles.badge}>Beta Access</div>
-          <div className={styles.badgePrimary}>Real-Time Trip Tracker</div>
+          <div className={styles.badgePrimary}>Real-time Trip Tracker</div>
         </div>
         <h1 className={styles.heroHeading}>
           Real time <span style={{ color: 'var(--primary)' }}>Trip Tracker</span>
         </h1>
         <p className={styles.heroSub}>
           The perfect companion for journeys, bookings, and travel memories. 
-          Capture every ticket, log every expense, and track your trip in real-time.
+          Securely attach your digital tickets of your journey.
         </p>
 
         <div className={styles.heroActions}>
@@ -48,7 +47,7 @@ export default function Welcome() {
         <div className={styles.featureCard}>
           <div className={styles.featureIcon}>🎫</div>
           <h3>Ticket & Record Vault</h3>
-          <p>Securely attach photos of your tickets, QR codes, and booking confirmations directly to your trip events.</p>
+          <p>Securely attach your digital tickets of your journey directly to your trip events.</p>
         </div>
 
         <div className={styles.featureCard}>
