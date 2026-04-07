@@ -10,7 +10,7 @@ export function WelcomeView({ onStart }: { onStart: () => void }) {
       {/* HERO SECTION */}
       <header className={styles.heroContent}>
         <h1 className={styles.heroHeading}>
-          Structured Memory & <span style={{ color: 'var(--primary)' }}>Trip Tracking</span>.
+          Real time <span style={{ color: 'var(--primary)' }}>Trip Tracker</span>
         </h1>
         <p className={styles.heroSub}>
           Stop just tracking costs. Start building a high-leverage blueprint 

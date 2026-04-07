@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
  
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Life Spend Tracker',
-    short_name: 'SpendTracker',
-    description: 'High-fidelity financial tracking on the go.',
+    name: 'Real time Trip Tracker',
+    short_name: 'TripTracker',
+    description: 'High-fidelity travel and expense tracking on the go.',
     start_url: '/',
     display: 'standalone',
     background_color: '#09090b',

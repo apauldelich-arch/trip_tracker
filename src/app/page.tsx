@@ -367,26 +367,30 @@ export default function Home() {
                      </div>
                      <div className={styles.dayEvents}>
                        {dayEvents.map(e => (
-                         <div key={e.id} className={`glass ${styles.fullExpenseItem} ${styles.bookingHighlight}`}>
-                            <div className={styles.eventIcon}>{getEventIcon('booking', e.category)}</div>
-                            <div className={styles.expenseInfo}>
-                               <strong>{e.time && <span style={{ opacity: 0.6, fontSize: '0.9em', marginRight: '0.6rem' }}>{e.time}</span>}{e.title}</strong>
-                               <div className={styles.expenseSub}>
-                                 <span className={styles.categoryTag}>{e.category}</span>
-                                 <span className={styles.bookingBadge}>BOOKING</span>
-                                 {e.address && <button className={styles.mapBadge} onClick={(ev) => { ev.stopPropagation(); handleMapClick(e.address || ''); }}>📍 MAP</button>}
-                                 {e.attachment && <button className={styles.ticketBadge} onClick={(ev) => { ev.stopPropagation(); handleTicketClick(e.attachment || ''); }}>🎫 TICKET</button>}
-                                 {e.note && <span className={styles.noteText}>{e.note}</span>}
-                               </div>
-                            </div>
-                            <div className={styles.expenseValue}>
-                               {e.amount > 0 && <span className={styles.rowAmount}>{currentViewingSession.currency}{e.amount.toLocaleString()}</span>}
-                               <div className={styles.rowActions}>
-                                  <button className={styles.editRowBtn} onClick={() => { resetEventForm(e); setEditingEventId(e.id); setIsAddingEvent(true); }}>Edit</button>
-                                  <button className={styles.deleteRowBtn} onClick={() => setDeletingEventId(e.id)} style={{ color: 'var(--status-critical)' }}>✕</button>
-                               </div>
-                            </div>
-                         </div>
+                          <div key={e.id} className={`glass ${styles.fullExpenseItem} ${styles.bookingHighlight}`}>
+                             <div className={styles.eventIcon}>{getEventIcon('booking', e.category)}</div>
+                             <div className={styles.expenseInfo}>
+                                <div className={styles.expenseTopLine}>
+                                   <strong>{e.time && <span className={styles.timeTag}>{e.time}</span>}{e.title}</strong>
+                                   {e.amount > 0 && <span className={styles.rowAmount}>{currentViewingSession.currency}{e.amount.toLocaleString()}</span>}
+                                </div>
+                                <div className={styles.expenseSub}>
+                                   <div className={styles.tagGroup}>
+                                      <span className={styles.categoryTag}>{e.category}</span>
+                                      <span className={styles.bookingBadge}>BOOKING</span>
+                                   </div>
+                                   <div className={styles.actionBadges}>
+                                      {e.address && <button className={styles.mapBadge} onClick={(ev) => { ev.stopPropagation(); handleMapClick(e.address || ''); }}>📍 MAP</button>}
+                                      {e.attachment && <button className={styles.ticketBadge} onClick={(ev) => { ev.stopPropagation(); handleTicketClick(e.attachment || ''); }}>🎫 TICKET</button>}
+                                   </div>
+                                   <div className={styles.rowActions}>
+                                      <button className={styles.editRowBtn} onClick={() => { resetEventForm(e); setEditingEventId(e.id); setIsAddingEvent(true); }}>Edit</button>
+                                      <button className={styles.deleteRowBtn} onClick={() => setDeletingEventId(e.id)} style={{ color: 'var(--status-critical)' }}>✕</button>
+                                   </div>
+                                </div>
+                                {e.note && <div className={styles.noteText}>{e.note}</div>}
+                             </div>
+                          </div>
                        ))}
                      </div>
                    </div>

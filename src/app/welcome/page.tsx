@@ -11,7 +11,7 @@ export default function Welcome() {
       <header className={styles.heroContent}>
         <div className={styles.badge}>Beta Access</div>
         <h1 className={styles.heroHeading}>
-          Master Your Project's <span style={{ color: 'var(--primary)' }}>Burn Rate</span>.
+          Real time <span style={{ color: 'var(--primary)' }}>Trip Tracker</span>
         </h1>
         <p className={styles.heroSub}>
           The perfect companion for trips, renovations, and big-ticket life events. 
