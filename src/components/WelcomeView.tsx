@@ -13,7 +13,7 @@ export function WelcomeView({ onStart }: { onStart: () => void }) {
           <div className={styles.badgePrimary}>Real-time Trip Tracker</div>
         </div>
         <h1 className={styles.heroHeading}>
-          Real time <span style={{ color: 'var(--primary)' }}>Trip Tracker</span>
+          Control Your <span style={{ color: 'var(--primary)' }}>Travel Spending</span>
         </h1>
         <p className={styles.heroSub}>
           The perfect companion for journeys, bookings, and travel memories. 
