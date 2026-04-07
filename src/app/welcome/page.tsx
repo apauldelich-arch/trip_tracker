@@ -9,15 +9,18 @@ export default function Welcome() {
   return (
     <div className={styles.landingBody}>
       <header className={styles.heroContent}>
-        <div className={styles.badge}>Beta Access</div>
+        <div className={styles.badgeStrip}>
+          <div className={styles.badge}>Beta Access</div>
+          <div className={styles.badgePrimary}>Real-Time Trip Tracker</div>
+        </div>
         <h1 className={styles.heroHeading}>
           Real time <span style={{ color: 'var(--primary)' }}>Trip Tracker</span>
         </h1>
         <p className={styles.heroSub}>
-          The perfect companion for trips, renovations, and big-ticket life events. 
-          Track specific budgets in real-time, 100% privately on your device.
+          The perfect companion for journeys, bookings, and travel memories. 
+          Capture every ticket, log every expense, and track your trip in real-time.
         </p>
-        
+
         <div className={styles.heroActions}>
           <Link href="/" className={styles.primaryBtn}>
             Launch App
@@ -39,25 +42,25 @@ export default function Welcome() {
         <div className={styles.featureCard}>
           <div className={styles.featureIcon}>🏔️</div>
           <h3>Trip Optimized</h3>
-          <p>Whether it’s a weekend in Rome or a month in Bali, track your daily burn rate so you never run out of fun-money.</p>
+          <p>Real-time memory and spend engine for your ongoing journeys. One-click tracking for expenses and events.</p>
         </div>
 
         <div className={styles.featureCard}>
-          <div className={styles.featureIcon}>🛠️</div>
-          <h3>Project Ready</h3>
-          <p>Home renovations, car builds, or side projects. Segregate your spending from your daily life accounts.</p>
+          <div className={styles.featureIcon}>🎫</div>
+          <h3>Ticket & Record Vault</h3>
+          <p>Securely attach photos of your tickets, QR codes, and booking confirmations directly to your trip events.</p>
+        </div>
+
+        <div className={styles.featureCard}>
+          <div className={styles.featureIcon}>📍</div>
+          <h3>Itinerary Building</h3>
+          <p>Your timeline builds itself as you log events. See your journey's story unfold day by day with MAP navigation.</p>
         </div>
 
         <div className={styles.featureCard}>
           <div className={styles.featureIcon}>🛡️</div>
           <h3>100% Private</h3>
-          <p>No accounts. No credit cards to link. No cloud databases. Your data lives exclusively on your device's local storage.</p>
-        </div>
-
-        <div className={styles.featureCard}>
-          <div className={styles.featureIcon}>🏷️</div>
-          <h3>Smart Normalization</h3>
-          <p>Typos won't break your analytics. Our engine automatically trims and standardizes your categories and vendors.</p>
+          <p>No accounts. No cloud databases. Your data lives exclusively on your device's local storage.</p>
         </div>
       </section>
 
